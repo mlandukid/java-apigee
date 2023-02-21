@@ -38,7 +38,11 @@ Execute the script java-hello/buildsetup.sh. This script installs the required J
 Change to the java-hello/callout directory.
 
 Execute Maven:
+
+````
 "mvn clean package"
+
+````
 
 # Deploy and Test the API Proxy
 Follow these steps to deploy and test the API proxy:
@@ -47,11 +51,17 @@ Change to the "java-hello" directory.
 
 Zip the API proxy bundle:
 
+````
 "zip apiproxy-bundle.zip -r apiproxy -x \*.\*~"
 
+````
 Upload the proxy bundle to an environment in your Apigee organization. See Creating an API proxy. Be sure to use the "Upload Proxy Bundle" option.
 
 When the proxy is deployed, try calling it with the following command:
+
+````
 curl https://$HOSTNAME/java-hello -H "username:Will"
+
+````
 
 This should return "Hello, Will!".
